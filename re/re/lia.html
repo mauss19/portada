@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout Modular - 1100x600</title>
+  <link rel="stylesheet" href="lia.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   
+  
+</head>
+<body>
+
+  <!-- CONTENEDOR PRINCIPAL -->
+  <div class="container">
+    
+    
+    <header>
+
+      <!--<div class="header-left">
+        <svg class="header-icon" viewBox="0 0 24 24">
+          <path d="M12 2c-1.1 0-2 .9-2 2 0 .74.4 1.38 1 1.72V7l-3 2v2l3-1v3.28c-.6.34-1 .98-1 1.72 0 1.1.9 2 2 2s2-.9 2-2c0-.74-.4-1.38-1-1.72V10l3 1V9l-3-2V5.72c.6-.34 1-.98 1-1.72 0-1.1-.9-2-2-2zm-5 13l-3 7h16l-3-7H7z"/>
+        </svg>
+      </div>
+      *********** y cambie el svg por el icono no cambio toodos por que voy un poco atrazdo 
+      pero es para saver que si puedo **************************************************-->
+
+      <div class="header-left">
+    <i class="fa-solid fa-user header-icon"></i>
+</div>
+
+
+
+    <div class="header-right">
+  <!-- Buscador Funcional -->
+  <form class="search-bar" role="search" action="#" method="GET">
+    <svg class="search-icon" viewBox="0 0 24 24">
+      <path fill="#e64a82" d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+    </svg>
+    <input type="text" placeholder="Buscar..." aria-label="Buscar">
+  </form>
+
+  <!-- La barra corta de abajo -->
+  <div class="search-bar short"></div>
+</div>
+    </header>
+
+    <!-- 2. NAV  se puede hacer iconos verdaderos-->
+    <nav >
+      <div class="nav-item">
+        <svg class="nav-icon" viewBox="0 0 24 24"><path fill="#e64a82" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+      </div>
+      <div class="nav-item">
+        <svg class="nav-icon" viewBox="0 0 24 24"><path fill="#4a90e2" d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+      </div>
+      <div class="nav-item">
+        <svg class="nav-icon" viewBox="0 0 24 24"><path fill="#f5a623" d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
+      </div>
+      <div class="nav-item">
+        <svg class="nav-icon" viewBox="0 0 24 24"><path fill="#7ed321" d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+      </div>
+    </nav>
+   
+
+    <!-- 3. MAIN (SECTION + ASIDE) sobra un poco el main -->
+    <main>
+      <section>
+        <div class="card">
+          <div class="card-img">
+            <svg viewBox="0 0 24 24"><path fill="#333" d="M21.58 13.09l-3.95-3.95A3.001 3.001 0 0 0 15.5 8H13V5c0-.55-.45-1-1-1s-1 .45-1 1v3H8.5c-.83 0-1.58.34-2.12.88L2.42 12.83c-.39.39-.39 1.02 0 1.41l2.34 2.34c.39.39 1.02.39 1.41 0L9 13.76V19c0 .55.45 1 1 1h8c1.66 0 3-1.34 3-3v-3.09c0-.38-.15-.75-.42-1.02z"/></svg>
+          </div>
+          <div class="card-bar"></div>
+        </div>
+
+        <div class="card">
+          <div class="card-img">
+            <svg viewBox="0 0 24 24"><path fill="#222" d="M12 2C9 2 5 3.5 3 6c2 1 4 1 6 1h6c2 0 4 0 6-1-2-2.5-6-4-9-4zm-7 7v3c0 3.87 3.13 7 7 7s7-3.13 7-7V9H5z"/></svg>
+          </div>
+          <div class="card-bar"></div>
+        </div>
+
+        <div class="card">
+          <div class="card-img">
+            <svg viewBox="0 0 24 24"><path fill="#222" d="M15 12c0 1.66-1.34 3-3 3s-3-1.34-3-3 1.34-3 3-3 3 1.34 3 3zm1-9H8L7 6H3v14h18V6h-4l-1-3z"/></svg>
+          </div>
+          <div class="card-bar"></div>
+        </div>
+
+        <div class="card">
+          <div class="card-img">
+            <svg viewBox="0 0 24 24"><path fill="#111" d="M12 2c-1.1 0-2 .9-2 2 0 .74.4 1.38 1 1.72V7l-3 2v2l3-1v3.28c-.6.34-1 .98-1 1.72 0 1.1.9 2 2 2s2-.9 2-2c0-.74-.4-1.38-1-1.72V10l3 1V9l-3-2V5.72c.6-.34 1-.98 1-1.72 0-1.1-.9-2-2-2zm-5 13l-3 7h16l-3-7H7z"/></svg>
+          </div>
+          <div class="card-bar"></div>
+        </div>
+      </section>
+
+      <aside>
+        <svg class="tag-icon" viewBox="0 0 24 24"><path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"/></svg>
+      </aside>
+    </main>
+
+    
+
+     <footer><!-- pude poner los demas en listas para eliminar tantos div pero los dejo para recordar que hay varias formas de hacerlo-->
+        <ul class="footer-list">
+            <li class="footer-item">
+                <svg class="footer-icon" viewBox="0 0 24 24"><path fill="#d0021b" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                <div class="footer-btn"></div>
+            </li>
+
+            <li class="footer-item">
+                <svg class="footer-icon" viewBox="0 0 24 24"><path fill="#ffffff" d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                <div class="footer-btn"></div>
+            </li>
+
+            <li class="footer-item">
+                <svg class="footer-icon" viewBox="0 0 24 24"><path fill="#7ed321" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                <div class="footer-btn"></div>
+            </li>
+        </ul>
+    </footer>
+
+  </div>
+
+</body>
+</html>

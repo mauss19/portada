@@ -1,0 +1,224 @@
+@charset "UTF-8";
+/* Definición de Variables de Color */
+/* Aplicamos el mixin de golpe a todos los contenedores que lo necesitan, incluyendo el footer y los items */
+body, header, .container, .header-left, .header-right, .search-bar, nav, .nav-item, main, section, .card, .card-img, aside, footer, .footer-list, .footer-item {
+  display: flex;
+}
+
+body {
+  /* El degradado refleja las tonalidades verdes, turquesas y moradas de la imagen */
+  background: radial-gradient(circle at 80% 20%, #77ad35 0%, transparent 40%), radial-gradient(circle at 20% 80%, #00b4d8 0%, transparent 50%), linear-gradient(135deg, #5c004d 0%, #0077b6 100%);
+  background-color: #4a0e4e;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+} /* fin del body */
+/* 2. CONTENEDOR PRINCIPAL FIXA EN 1100px x 600px */
+.container {
+  width: 1100px;
+  height: 600px;
+  /* Fondo blanco semitransparente que absorbe el color de atrás */
+  background: rgba(255, 255, 255, 0.15);
+  /* Desenfoque del fondo (Frosted Glass) */
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px); /* Soporte para Safari */
+  /* Sombra suave e inclinada */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  border: 1px solid #ffffff;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 5px;
+} /* fin del container */
+/* 3. HEADER (FRANJA SUPERIOR ) */
+header {
+  height: 190px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 80px;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: #ffffff;
+} /* fin del header */
+.header-left {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #ffffff;
+  border-radius: 50px;
+  justify-content: center;
+  align-items: center;
+} /* fin del header-left */
+.header-icon {
+  font-size: 80px; /* Cambia el tamaño de la fuente/icono */
+  color: #ffffff;
+} /* fin del header-icon */
+.header-right {
+  flex-direction: column;
+  gap: 15px;
+  width: 480px;
+} /* fin del header-right */
+.search-bar {
+  width: 100%;
+  height: 38px;
+  background-color: #ffffff;
+  border-radius: 19px;
+  align-items: center;
+  padding: 0 15px;
+  gap: 10px;
+} /* fin del search-bar */
+.search-bar.short {
+  width: 70%;
+  height: 10px;
+  /* Aplicamos la animación: durará 8 segundos, se repetirá infinitamente y tendrá una transición suave */
+  animation: fluctuarColores 8s infinite ease-in-out;
+}
+
+/* Definimos la secuencia de colores paso a paso (porcentajes) */
+@keyframes fluctuarColores {
+  0% {
+    background-color: #0077b6;
+  } /* Azul inicial */
+  16.6% {
+    background-color: #ff00ff;
+  } /* Magenta */
+  33.3% {
+    background-color: #8a2be2;
+  } /* Violeta */
+  50% {
+    background-color: #000000;
+  } /* Negro */
+  66.6% {
+    background-color: #ffffff;
+  } /* Blanco */
+  83.3% {
+    background-color: #800080;
+  } /* Púrpura */
+  100% {
+    background-color: #76bc21;
+  } /* Verde limón */
+}
+/* Estilos para el icono de la lupa dentro del buscador */
+.search-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+} /* fin del search-icon */
+/* Estilos para la caja donde el usuario escribe */
+.search-bar input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  font-size: 14px;
+  color: #333;
+} /* fin del search-bar input */
+.search-bar input::-moz-placeholder {
+  color: #aaa;
+}
+.search-bar input::placeholder {
+  color: #aaa;
+} /* fin del search-bar input::placeholder */
+/* 4. NAV (BARRA DE ICONOS DE NAVEGACIÓN) este el original */
+nav {
+  height: 70px;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: #ffffff;
+  justify-content: space-around;
+  padding: 0 90px;
+} /* fin del nav */
+.nav-item {
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+} /* fin del nav-item */
+.nav-item:hover {
+  transform: scale(1.15);
+} /*fin del nav-item:hover */
+.nav-icon {
+  width: 38px;
+  height: 38px;
+} /* fin del nav-icon */
+/* 5. ÁREA CENTRAL (MAIN CONTENIENDO SECTION Y ASIDE) */
+main {
+  flex: 1;
+  padding: 18px 40px 10px 40px;
+  gap: 20px;
+} /* fin del main */
+/* SECTION (CATÁLOGO DE PRODUCTOS - 4 TARJETAS) */
+section {
+  flex: 1;
+  justify-content: space-between;
+  gap: 15px;
+} /* fin del section */
+.card {
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+} /* fin del card */
+.card-img {
+  width: 85px;
+  height: 85px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+} /* fin del card-img */
+.card-img svg {
+  width: 100%;
+  height: 100%;
+} /* fin del card-img svg */
+.card-bar {
+  width: 100%;
+  height: 22px;
+  background-color: #ffffff;
+  border-radius: 12px;
+} /* fin del card-bar */
+/* ASIDE (BARRA LATERAL CON ETIQUETAS) */
+aside {
+  width: 45px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+} /* fin del aside */
+.tag-icon {
+  width: 32px;
+  height: 32px;
+  fill: #aaa;
+} /* fin del tag-icon */
+/* 6. FOOTER (BARRA INFERIOR DE BOTONES) */
+footer {
+  height: 55px;
+  border-width: 1px 0 0 0;
+  border-style: solid;
+  border-color: #ffffff;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5px;
+} /* fin del footer */
+/* Controla la fila horizontal de los elementos de la lista */
+.footer-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 35px; /* Espacio entre cada botón del footer */
+} /* fin del footer-list */
+.footer-item {
+  flex-direction: row; /* Pone el icono alado */
+  align-items: center;
+  gap: 8px;
+} /* fin del footer-item */
+.footer-icon {
+  width: 22px;
+  height: 22px;
+} /* fin del footer-icon */
+.footer-btn {
+  width: 110px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+} /* fin del footer-btn *//*# sourceMappingURL=lia.css.map */
